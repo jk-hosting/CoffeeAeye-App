@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="C1.png" width="120" style="border-radius:24px" alt="Coffee A-Eye icon" />
+  <img src="C1.png" width="120" style="border-radius:24px" alt="Coffee Aeye icon" />
 </p>
 
-<h1 align="center">Coffee A-Eye</h1>
+<h1 align="center">Coffee Aeye</h1>
 
 <p align="center"><b>Scan the bag. Match the recipe. Brew it perfectly — with an AI barista in your pocket.</b></p>
 
 <p align="center">
-  Point your camera at any coffee bag and Coffee A-Eye reads the label, builds a full bean dossier,<br/>
+  Point your camera at any coffee bag and Coffee Aeye reads the label, builds a full bean dossier,<br/>
   matches it to brew recipes, and walks you through the pour — entirely on-device. No cloud, no account, no data leaves your phone.
 </p>
 
@@ -96,4 +96,4 @@ Flutter · Riverpod · Drift (SQLite) · go_router · Google ML Kit OCR · Gemma
 
 ---
 
-<p align="center"><i>Coffee A-Eye — the whole coffee journey, from bag label to golden cup.</i></p>
+<p align="center"><i>Coffee Aeye — the whole coffee journey, from bag label to golden cup.</i></p>
