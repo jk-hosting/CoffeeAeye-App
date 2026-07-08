@@ -18,12 +18,10 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white&labelColor=1A1A1A" />
-  <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white&labelColor=1A1A1A" />
-  <img src="https://img.shields.io/badge/Gemma_on--device_AI-FFB68C?style=for-the-badge&logo=google&logoColor=1A1A1A&labelColor=1A1A1A" />
-  <img src="https://img.shields.io/badge/ML_Kit_OCR-4285F4?style=for-the-badge&logo=google&logoColor=white&labelColor=1A1A1A" />
-  <img src="https://img.shields.io/badge/SQLite_(Drift)-003B57?style=for-the-badge&logo=sqlite&logoColor=white&labelColor=1A1A1A" />
-  <img src="https://img.shields.io/badge/Bluetooth_LE-0082FC?style=for-the-badge&logo=bluetooth&logoColor=white&labelColor=1A1A1A" />
+  <img src="https://img.shields.io/badge/100%25_ON--DEVICE_AI-FFB68C?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/WORKS_FULLY_OFFLINE-82D996?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/NO_ACCOUNT_NEEDED-A4C8FF?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/LIVE_BLUETOOTH_SCALES-0082FC?style=for-the-badge&logo=bluetooth&logoColor=white" />
 </p>
 
 ---
@@ -90,10 +88,12 @@ For the obsessed: a dedicated Lab with dial-in reports, run tracking, and a suit
 - **No account. No cloud. No tracking.** Every model runs on your device; every record lives in a local SQLite database.
 - **Full backup &amp; restore** — export your entire shelf, recipes, and lab data as a single archive and share or re-import it anywhere.
 
-## <img src="https://img.shields.io/badge/BUILT_WITH-FFB68C?style=for-the-badge&labelColor=1A1A1A" height="26"/> Under the hood
-
-Flutter · Riverpod · Drift (SQLite) · go_router · Google ML Kit OCR · Gemma on-device LLM/VLM (flutter_gemma) · universal_ble for scales &amp; refractometers · local notifications · Fraunces typography on a crema-and-espresso dark theme.
-
 ---
+
+<p align="center">
+  <a href="https://play.google.com/store/apps/details?id=com.jkhosting.coffeeaeye&hl=en">
+    <img src="https://img.shields.io/badge/GET%20IT%20ON-Google%20Play-34A853?style=for-the-badge&logo=googleplay&logoColor=white&labelColor=1A1A1A" />
+  </a>
+</p>
 
 <p align="center"><i>Coffee Aeye — the whole coffee journey, from bag label to golden cup.</i></p>
