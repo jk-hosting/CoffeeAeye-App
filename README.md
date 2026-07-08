@@ -1,10 +1,6 @@
 <p align="center">
-  <img src="C1.png" width="120" style="border-radius:24px" alt="Coffee Aeye icon" />
+  <img src="banner.png" width="100%" alt="Coffee Aeye — Scan the bag. Match the recipe. Brew it perfectly." />
 </p>
-
-<h1 align="center">Coffee Aeye</h1>
-
-<p align="center"><b>Scan the bag. Match the recipe. Brew it perfectly — with an AI barista in your pocket.</b></p>
 
 <p align="center">
   Point your camera at any coffee bag and Coffee Aeye reads the label, builds a full bean dossier,<br/>
@@ -54,7 +50,7 @@ A seven-signal matching engine scores every recipe against the scanned bean — 
 
 ## <img src="https://img.shields.io/badge/BREW-FFB68C?style=for-the-badge&labelColor=1A1A1A" height="26"/> Guided brewing, step by step
 
-A full-screen brew-along timer with a progress ring, per-step instructions, and audio cues keeps your hands on the kettle, not the phone. Connect a Bluetooth scale — **Acaia, Bookoo, Decent, Felicita** — and watch live weight and flow rate right in the brew screen.
+A full-screen brew-along timer with a progress ring, per-step instructions, and audio cues keeps your hands on the kettle, not the phone. Connect a Bluetooth scale — **Bookoo, Decent, Felicita** — and watch live weight and flow rate right in the brew screen.
 
 <table><tr>
 <td width="50%" valign="top"><b>Smart feedback loop</b><br/>Rate the cup, tag what was off (bitter, sour, weak…), and the rating advisor translates it into concrete grind/temp/ratio moves for next time.</td>
