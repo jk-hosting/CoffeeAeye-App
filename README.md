@@ -11,13 +11,11 @@
   matches it to brew recipes, and walks you through the pour — entirely on-device. No cloud, no account, no data leaves your phone.
 </p>
 
-<!--
 <p align="center">
-  <a href="PLAY_STORE_URL">
+  <a href="https://play.google.com/store/apps/details?id=com.jkhosting.coffeeaeye&hl=en">
     <img src="https://img.shields.io/badge/GOOGLE%20PLAY-Available%20now-34A853?style=for-the-badge&logo=googleplay&logoColor=white&labelColor=1A1A1A" />
   </a>
 </p>
--->
 
 <p align="center">
   <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white&labelColor=1A1A1A" />
