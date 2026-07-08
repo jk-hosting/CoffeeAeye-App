@@ -1,6 +1,10 @@
 <p align="center">
-  <img src="banner.png" width="100%" alt="Coffee Aeye — Scan the bag. Match the recipe. Brew it perfectly." />
+  <img src="C1.png" width="120" style="border-radius:24px" alt="Coffee Aeye icon" />
 </p>
+
+<h1 align="center">Coffee Aeye</h1>
+
+<p align="center"><b>Scan the bag. Match the recipe. Brew it perfectly — with an AI barista in your pocket.</b></p>
 
 <p align="center">
   Point your camera at any coffee bag and Coffee Aeye reads the label, builds a full bean dossier,<br/>
