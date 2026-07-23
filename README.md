@@ -7,7 +7,7 @@
 <p align="center"><b>Scan the bag. Match the recipe. Brew it perfectly — with an AI barista in your pocket.</b></p>
 
 <p align="center">
-  Point your camera at any coffee bag and Coffee Aeye reads the label, builds a full bean dossier,<br/>
+  Point your camera at any coffee bag and Coffee Aeye reads the label, builds a full bean profile,<br/>
   matches it to the right recipes, and walks you through the pour — powered by on-device AI that feels instant.
 </p>
 
@@ -38,9 +38,9 @@
   <img src="C4.jpg" width="30%" alt="Brew-along — live step-by-step timer" />
 </p>
 
-## <img src="https://img.shields.io/badge/SCAN-FFB68C?style=for-the-badge&labelColor=1A1A1A" height="26"/> One photo. A complete bean dossier.
+## <img src="https://img.shields.io/badge/SCAN-FFB68C?style=for-the-badge&labelColor=1A1A1A" height="26"/> One photo. A complete bean profile.
 
-Snap the front (and back) of any coffee bag and on-device AI reads the label for you — capturing tasting notes, origin, region, process, roast level, elevation, varietal, caffeine, and bag weight into a complete bean dossier. The vision model works in the background, so a full profile is ready the moment you finish shooting.
+Snap the front (and back) of any coffee bag and on-device AI reads the label for you — capturing tasting notes, origin, region, process, roast level, elevation, varietal, caffeine, and bag weight into a complete bean profile. The vision model works in the background, so a full profile is ready the moment you finish shooting.
 
 <table><tr>
 <td width="50%" valign="top"><b>100% on-device AI</b><br/>A powerful vision model turns any label into a rich, structured profile — no typing, no manual entry, ready in seconds. Miss a detail? Tap to edit any field by hand.</td>
@@ -52,11 +52,11 @@ Snap the front (and back) of any coffee bag and on-device AI reads the label for
 
 ## <img src="https://img.shields.io/badge/MATCH-FFB68C?style=for-the-badge&labelColor=1A1A1A" height="26"/> Recipes that fit *this* bag
 
-A seven-signal matching engine scores every recipe against the scanned bean — process, roast level, flavor direction, brew method, dose, and more — then ranks them and explains *why* each one fits in plain language ("pulls the clarity that washed coffees are loved for"). No guesswork, no generic presets: every suggestion is tuned to the beans in your hand.
+Coffee Aeye weighs every recipe against the scanned bean — process, roast level, flavor direction, brew method, dose, and more — then ranks them and explains *why* each one fits in plain language ("pulls the clarity that washed coffees are loved for"). No guesswork, no generic presets: every suggestion is tuned to the beans in your hand.
 
 <table><tr>
 <td width="50%" valign="top"><b>Learns your palate</b><br/>Rate your brews and a taste-profile model builds a picture of what you actually enjoy, surfacing a "Because you liked…" row of beans and recipes matched to your taste.</td>
-<td width="50%" valign="top"><b>Knows how you brew</b><br/>A live dossier reads your real history — favourite methods, ratios, and origins — so recommendations reflect your habits, not a textbook.</td>
+<td width="50%" valign="top"><b>Knows how you brew</b><br/>A live profile reads your real history — favourite methods, ratios, and origins — so recommendations reflect your habits, not a textbook.</td>
 </tr></table>
 
 **Chat with an AI barista.** The built-in Brew Expert talks through any recommendation live — ask why a 4:6 method suits a dark roast, how to push more sweetness, or what to change when yesterday's cup fell flat — answered instantly by the on-device model.
