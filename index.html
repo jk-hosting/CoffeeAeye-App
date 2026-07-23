@@ -11,7 +11,7 @@
 <link rel="icon" type="image/png" href="C1.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Baloo+2:wght@500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,600&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#0E0B0A; --bg2:#15100E; --card:#1A1512; --card2:#221A15;
@@ -54,7 +54,8 @@
     border-bottom:1px solid var(--line2);
   }
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-size:22px;font-weight:600}
+  .wordmark{font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;letter-spacing:-.01em}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Baloo 2',system-ui,sans-serif;font-size:23px;font-weight:700;letter-spacing:-.01em}
   .brand img{width:30px;height:30px;border-radius:9px}
   .nav-links{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:600;color:var(--muted)}
   .nav-links a:hover{color:var(--ink)}
@@ -148,7 +149,7 @@
 
   /* footer */
   footer{padding:80px 0 64px;text-align:center;border-top:1px solid var(--line2);margin-top:40px}
-  footer .serif{font-size:clamp(26px,4vw,40px);display:block;margin-bottom:8px}
+  footer .wordmark{font-size:clamp(28px,4.4vw,44px);display:block;margin-bottom:8px}
   footer .sub{color:var(--muted);margin-bottom:28px;font-size:17px}
   .foot-links{margin-top:34px;color:var(--muted);font-size:14px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
   .foot-links a:hover{color:var(--ink)}
@@ -209,7 +210,7 @@
     <div style="position:relative">
       <svg class="arc" style="right:-40px;top:-30px;width:300px;height:300px" viewBox="0 0 300 300" fill="none" stroke="var(--copper)" stroke-width="1.5"><circle cx="150" cy="150" r="140"/></svg>
       <div class="media4 hero-media">
-        <video src="media/anim-brew-timer-intro.mp4" autoplay muted loop playsinline poster="media/coffee-aeye-brew-timer-post.png"></video>
+        <img src="media/10-coffee-aeye-know-your-beans.png" alt="Know your beans — a complete bean dossier">
       </div>
     </div>
   </div>
@@ -335,7 +336,7 @@
 
 <footer>
   <div class="wrap">
-    <span class="serif">Coffee Aeye</span>
+    <span class="wordmark">Coffee Aeye</span>
     <div class="sub">The whole coffee journey, from bag label to golden cup.</div>
     <a class="btn" href="https://play.google.com/store/apps/details?id=com.jkhosting.coffeeaeye&hl=en">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 2.5v19l16-9.5-16-9.5z"/></svg>
