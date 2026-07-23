@@ -49,9 +49,9 @@
 
   /* nav */
   nav{
-    position:sticky;top:0;z-index:50;
-    backdrop-filter:blur(12px);
-    background:linear-gradient(to bottom, rgba(14,11,10,.9), rgba(14,11,10,.55));
+    position:-webkit-sticky;position:sticky;top:0;z-index:50;
+    -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+    background:rgba(14,11,10,.94);
     border-bottom:1px solid var(--line2);
   }
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
