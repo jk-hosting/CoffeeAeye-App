@@ -39,44 +39,49 @@
 Snap the front (and back) of any coffee bag and on-device AI reads the label for you — capturing tasting notes, origin, region, process, roast level, elevation, varietal, caffeine, and bag weight into a complete bean dossier. The vision model works in the background, so a full profile is ready the moment you finish shooting.
 
 <table><tr>
-<td width="50%" valign="top"><b>100% on-device AI</b><br/>A powerful vision model turns any label into a rich, structured profile — no typing, no manual entry, ready in seconds.</td>
-<td width="50%" valign="top"><b>Front + back capture</b><br/>Add the back of the bag for richer cupping notes, roast dates, and freshness tracking.</td>
+<td width="50%" valign="top"><b>100% on-device AI</b><br/>A powerful vision model turns any label into a rich, structured profile — no typing, no manual entry, ready in seconds. Miss a detail? Tap to edit any field by hand.</td>
+<td width="50%" valign="top"><b>Front + back capture</b><br/>Add the back of the bag to pull in roast dates, richer cupping notes, and everything the front leaves out — the more you shoot, the deeper the profile.</td>
 </tr><tr>
-<td width="50%" valign="top"><b>Roast &amp; flavor profiling</b><br/>Every bag gets a roast-level slider, classic→unique flavor scale, and a cupping-notes card.</td>
-<td width="50%" valign="top"><b>Your shelf, organized</b><br/>A visual library of every bag with photos, freshness rings, and resting/degas status at a glance.</td>
+<td width="50%" valign="top"><b>Roast &amp; flavor profiling</b><br/>Every bag gets a roast-level slider, a classic→unique flavor scale, and a cupping-notes card you can fine-tune to match the cup in front of you.</td>
+<td width="50%" valign="top"><b>Your shelf, organized</b><br/>A visual library of every bag with photos, freshness rings, and resting/degas status at a glance — see what's peaking and what still needs to rest without opening a single label.</td>
 </tr></table>
 
 ## <img src="https://img.shields.io/badge/MATCH-FFB68C?style=for-the-badge&labelColor=1A1A1A" height="26"/> Recipes that fit *this* bag
 
-A seven-signal matching engine scores every recipe against the scanned bean — process, roast, flavor direction, method, and more — and explains *why* each one fits ("pulls the clarity that washed coffees are loved for"). Rate your brews and a taste-profile model learns your palate, surfacing "Because you liked…" suggestions.
+A seven-signal matching engine scores every recipe against the scanned bean — process, roast level, flavor direction, brew method, dose, and more — then ranks them and explains *why* each one fits in plain language ("pulls the clarity that washed coffees are loved for"). No guesswork, no generic presets: every suggestion is tuned to the beans in your hand.
 
-**Chat with an AI barista.** The built-in Brew Expert discusses the recommendations live — ask why a 4:6 method suits a dark roast, or how to push sweetness — all answered by the on-device model.
+<table><tr>
+<td width="50%" valign="top"><b>Learns your palate</b><br/>Rate your brews and a taste-profile model builds a picture of what you actually enjoy, surfacing a "Because you liked…" row of beans and recipes matched to your taste.</td>
+<td width="50%" valign="top"><b>Knows how you brew</b><br/>A live dossier reads your real history — favourite methods, ratios, and origins — so recommendations reflect your habits, not a textbook.</td>
+</tr></table>
+
+**Chat with an AI barista.** The built-in Brew Expert talks through any recommendation live — ask why a 4:6 method suits a dark roast, how to push more sweetness, or what to change when yesterday's cup fell flat — answered instantly by the on-device model.
 
 ## <img src="https://img.shields.io/badge/BREW-FFB68C?style=for-the-badge&labelColor=1A1A1A" height="26"/> Guided brewing, step by step
 
-A full-screen brew-along timer with a progress ring, per-step instructions, and audio cues keeps your hands on the kettle, not the phone. Connect a Bluetooth scale — **Bookoo, Decent, Felicita** — and watch live weight and flow rate right in the brew screen.
+A full-screen brew-along timer with a progress ring, per-step pour instructions, and audio cues keeps your hands on the kettle, not the phone. Connect a Bluetooth scale — **Bookoo, Decent, Felicita** — and watch live weight and real-time flow rate right on the brew screen, so you hit every target the moment it happens.
 
 <table><tr>
-<td width="50%" valign="top"><b>Smart feedback loop</b><br/>Rate the cup, tag what was off (bitter, sour, weak…), and the rating advisor translates it into concrete grind/temp/ratio moves for next time.</td>
-<td width="50%" valign="top"><b>Grinder dial mapping</b><br/>18 seeded grinder specs (Comandante, Niche Zero, DF64, Fellow Ode, 1Zpresso…) plus custom two-anchor mapping — recipes show settings in <i>your</i> grinder's clicks.</td>
+<td width="50%" valign="top"><b>Smart feedback loop</b><br/>Rate the cup, tag what was off (bitter, sour, weak, hollow…), and the rating advisor turns it into concrete grind, temperature, and ratio moves for your very next brew.</td>
+<td width="50%" valign="top"><b>Grinder dial mapping</b><br/>18 seeded grinder profiles (Comandante, Niche Zero, DF64, Fellow Ode, 1Zpresso, Timemore…) plus custom two-anchor mapping — every recipe shows its grind in <i>your</i> grinder's own clicks and numbers.</td>
 </tr><tr>
-<td width="50%" valign="top"><b>Brew history &amp; stats</b><br/>Every session logged: recipe, bag, rating, notes — with weekly stats on the home screen.</td>
-<td width="50%" valign="top"><b>Freshness &amp; reminders</b><br/>Degas windows, resting timers, and local notifications when a bag hits its peak.</td>
+<td width="50%" valign="top"><b>Brew history &amp; stats</b><br/>Every session is logged — recipe, bag, rating, notes — and rolled into weekly stats on the home screen so you can watch your brewing improve over time.</td>
+<td width="50%" valign="top"><b>Freshness &amp; reminders</b><br/>Automatic degas windows, resting timers, and local notifications tell you the moment a bag hits its flavor peak — and when it's starting to slide past it.</td>
 </tr></table>
 
 ## <img src="https://img.shields.io/badge/LAB-FFB68C?style=for-the-badge&labelColor=1A1A1A" height="26"/> A coffee-science laboratory
 
-For the obsessed: a dedicated Lab with dial-in reports, run tracking, and a suite of master-tier analysis tools.
+For the obsessed: a dedicated Lab that walks a bag through the full workflow — intake, preparation, brew, measurement, and iteration — with a suite of master-tier calculators, every result charted run over run.
 
 <table><tr>
-<td width="50%" valign="top"><b>Extraction Yield &amp; TDS</b><br/>Pair a DiFluid R2 refractometer over BLE, or enter TDS manually — EY trends charted run over run.</td>
-<td width="50%" valign="top"><b>Bean Structure Profiler</b><br/>Density-based structural analysis of the green/roasted bean.</td>
+<td width="50%" valign="top"><b>Bean intake</b><br/>Bean Structure Profiler (density, moisture, cellular structure), Roast DTR from first-crack-to-drop time, and a Degassing Predictor that calls the ideal rest window from roast level and density.</td>
+<td width="50%" valign="top"><b>Preparation</b><br/>A Water Workbench for mineral recipes, a Grind Surface Area estimator, and a Particle Size (PSD) logger to dial in your distribution.</td>
 </tr><tr>
-<td width="50%" valign="top"><b>Permeability (Darcy k) · Slurry Temp · Surface Area</b><br/>Physics-grade calculators charted per run, oldest → newest.</td>
-<td width="50%" valign="top"><b>Roast DTR · PSD Logger · Bypass Calculator</b><br/>Development-time ratio, particle-size distribution, and bypass dilution tools.</td>
+<td width="50%" valign="top"><b>Brew physics</b><br/>Darcy's Law permeability, Slurry Temp profiler, Puck Tamp pressure, an Espresso Flow profiler, and a Bypass / Dilution calculator — physics-grade, charted per run.</td>
+<td width="50%" valign="top"><b>Measure &amp; evaluate</b><br/>Pair a DiFluid R2 refractometer over Bluetooth (or key in TDS) for live Extraction Yield, log "salami" fractional-extraction curves, and score cups on an SCA-standard sensory sheet.</td>
 </tr><tr>
-<td width="50%" valign="top"><b>Matrix Optimizer &amp; Sensory Triage</b><br/>Finds the optimal direction across your logged runs and triages taste faults against the WCR lexicon.</td>
-<td width="50%" valign="top"><b>Water profiles &amp; comp scoring</b><br/>Water recipe builder plus competition-style score sheets, accuracy/speed drills, and preference brackets.</td>
+<td width="50%" valign="top"><b>Diagnose &amp; iterate</b><br/>A Sensory Triage defect matrix troubleshoots off-flavors against the WCR lexicon, while a Gradient Descent optimizer points to the single best change across all your logged runs.</td>
+<td width="50%" valign="top"><b>Competition ready</b><br/>Build routines in the Comp Choreographer, run competition-style score sheets, and drill accuracy, speed, and preference brackets.</td>
 </tr></table>
 
 <p align="center">
