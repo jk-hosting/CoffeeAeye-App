@@ -68,6 +68,21 @@
   .social-sm:hover{color:#241009;background:var(--peach-bright);border-color:var(--peach-bright)}
   .social-sm svg{width:18px;height:18px}
 
+  /* more-apps bar */
+  .appbar{
+    display:flex;justify-content:center;align-items:center;gap:11px;flex-wrap:wrap;
+    padding:9px 24px;font-size:13px;color:var(--muted);
+    background:var(--bg2);border-bottom:1px solid var(--line2);
+  }
+  .appbar .lbl{font-weight:700;letter-spacing:.02em}
+  .appbar a{
+    display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--ink);
+    padding:5px 13px;border-radius:999px;background:var(--card);border:1px solid var(--line2);
+    transition:border-color .2s ease, color .2s ease;
+  }
+  .appbar a:hover{border-color:var(--peach);color:var(--peach)}
+  .appbar a svg{width:12px;height:12px;opacity:.7}
+
   /* buttons */
   .btn{
     display:inline-flex;align-items:center;gap:10px;
@@ -205,6 +220,13 @@
 <body>
 <div class="glow"></div>
 <div class="content">
+
+<div class="appbar">
+  <span class="lbl">More apps</span>
+  <a href="https://jk-hosting.github.io/BoulderLog-App/">BoulderLog<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+  <a href="https://jk-hosting.github.io/BoulderTrain-App/">BoulderTrain<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+  <a href="https://jk-hosting.github.io/Beam-TV-App/">Beam<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+</div>
 
 <nav>
   <div class="wrap nav-in">
