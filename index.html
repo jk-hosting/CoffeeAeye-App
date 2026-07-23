@@ -115,6 +115,7 @@
   .sec-head p{color:var(--muted);font-size:18px}
 
   .grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .swipe-dots{display:none}
   .fcard{
     background:var(--card);border:1px solid var(--line2);border-radius:22px;padding:26px;
     transition:border-color .2s ease, transform .2s ease;
@@ -173,16 +174,20 @@
     .hero{grid-template-columns:1fr;gap:36px;text-align:center}
     .hero .lead{margin-left:auto;margin-right:auto}
     .hero-cta,.badges{justify-content:center}
-    .grid4{grid-template-columns:1fr}
     .motion{grid-template-columns:1fr;gap:44px}
-    /* gallery becomes a swipeable horizontal row per group */
-    .gallery{
+    /* feature cards + gallery become swipeable horizontal rows */
+    .grid4,.gallery{
       display:flex;gap:14px;overflow-x:auto;
       scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
       scrollbar-width:none;margin:0 -24px;padding:0 24px 2px;
     }
-    .gallery::-webkit-scrollbar{display:none}
+    .grid4::-webkit-scrollbar,.gallery::-webkit-scrollbar{display:none}
+    .fcard{flex:0 0 82%;scroll-snap-align:center}
     .gcard{flex:0 0 74%;scroll-snap-align:center}
+    .swipe-dots{
+      display:block;text-align:center;
+      color:var(--muted);opacity:.65;letter-spacing:.4em;font-size:14px;margin-top:14px;
+    }
     .ggroup::after{
       content:"• • •";display:block;text-align:center;
       color:var(--muted);opacity:.65;letter-spacing:.4em;font-size:14px;margin-top:14px;
@@ -302,6 +307,7 @@
         </ul>
       </div>
     </div>
+    <div class="swipe-dots">• • •</div>
   </div>
 </section>
 
