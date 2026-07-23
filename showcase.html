@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coffee Aeye — Scan the bag. Match the recipe. Brew it perfectly.</title>
+<meta name="description" content="Coffee Aeye reads any coffee bag, matches it to the right recipes, and walks you through the pour — powered by on-device AI.">
+<meta property="og:title" content="Coffee Aeye">
+<meta property="og:description" content="Scan the bag. Match the recipe. Brew it perfectly.">
+<meta property="og:image" content="social-preview.png">
+<link rel="icon" type="image/png" href="C1.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0E0B0A; --bg2:#15100E; --card:#1A1512; --card2:#221A15;
+    --line:rgba(255,182,140,.14); --line2:rgba(255,182,140,.08);
+    --peach:#FFB68C; --peach-bright:#FF9E6B; --ink:#F5F1EC; --muted:#A89B90;
+    --blue:#8FC0FF; --purple:#C9B3FF; --green:#5FD08A; --copper:#8A5A3C;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:'Archivo',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    line-height:1.55; -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{
+    font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+    font-size:13px;color:var(--peach);
+  }
+  h1,h2,h3{font-weight:900;letter-spacing:-.02em;line-height:1.02}
+  .serif{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:0}
+
+  /* radial warm glow + copper arcs */
+  .glow{
+    position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(60vw 60vw at 85% -5%, rgba(255,158,107,.10), transparent 60%),
+      radial-gradient(50vw 50vw at 0% 100%, rgba(138,90,60,.10), transparent 60%);
+  }
+  .content{position:relative;z-index:1}
+
+  /* nav */
+  nav{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(12px);
+    background:linear-gradient(to bottom, rgba(14,11,10,.9), rgba(14,11,10,.55));
+    border-bottom:1px solid var(--line2);
+  }
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-size:22px;font-weight:600}
+  .brand img{width:30px;height:30px;border-radius:9px}
+  .nav-links{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:600;color:var(--muted)}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links .readme{display:none}
+
+  /* buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--peach-bright);color:#241009;font-weight:800;
+    padding:13px 22px;border-radius:999px;font-size:15px;
+    transition:transform .15s ease, box-shadow .15s ease;
+    box-shadow:0 8px 30px rgba(255,158,107,.25);
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(255,158,107,.35)}
+  .btn svg{width:18px;height:18px}
+  .btn-ghost{
+    background:transparent;color:var(--ink);border:1px solid var(--line);
+    box-shadow:none;font-weight:700;
+  }
+  .btn-ghost:hover{border-color:var(--peach);box-shadow:none}
+
+  /* hero */
+  header{padding:72px 0 40px;position:relative}
+  .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .hero h1{font-size:clamp(40px,6.4vw,74px);margin:18px 0 8px}
+  .hero .lead{font-size:clamp(17px,2.2vw,21px);color:var(--muted);max-width:30ch;margin:14px 0 30px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .chip{
+    font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
+    padding:8px 14px;border-radius:999px;border:1px solid var(--line);color:var(--peach);
+    background:rgba(255,182,140,.06);
+  }
+
+  /* phone bezel */
+  .phone{
+    position:relative;margin:0 auto;width:min(300px,78%);
+    aspect-ratio:9/19.3;border-radius:38px;padding:9px;
+    background:linear-gradient(160deg,#2a221d,#0c0908);
+    box-shadow:0 30px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(255,182,140,.08) inset;
+  }
+  .phone video, .phone img{
+    width:100%;height:100%;object-fit:cover;border-radius:30px;display:block;background:#000;
+  }
+  .arc{position:absolute;z-index:0;pointer-events:none;opacity:.5}
+
+  /* feature band */
+  section{padding:64px 0;position:relative}
+  .sec-head{max-width:640px;margin-bottom:40px}
+  .sec-head h2{font-size:clamp(30px,4.4vw,46px);margin:14px 0 10px}
+  .sec-head p{color:var(--muted);font-size:18px}
+
+  .grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .fcard{
+    background:var(--card);border:1px solid var(--line2);border-radius:22px;padding:26px;
+    transition:border-color .2s ease, transform .2s ease;
+  }
+  .fcard:hover{border-color:var(--line);transform:translateY(-3px)}
+  .fcard .k{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--peach)}
+  .fcard h3{font-size:22px;margin:12px 0 10px;font-weight:800;letter-spacing:-.01em}
+  .fcard p{color:var(--muted);font-size:15.5px}
+  .fcard ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:9px}
+  .fcard li{position:relative;padding-left:24px;color:#cabfb4;font-size:15px}
+  .fcard li::before{
+    content:"";position:absolute;left:0;top:7px;width:11px;height:11px;border-radius:50%;
+    border:2px solid var(--peach);box-shadow:0 0 0 2px rgba(255,182,140,.15)
+  }
+  /* category dots */
+  .dot-blue::before{border-color:var(--blue)!important;box-shadow:0 0 0 2px rgba(143,192,255,.15)!important}
+  .dot-purple::before{border-color:var(--purple)!important;box-shadow:0 0 0 2px rgba(201,179,255,.15)!important}
+  .dot-green::before{border-color:var(--green)!important;box-shadow:0 0 0 2px rgba(95,208,138,.15)!important}
+
+  /* motion row */
+  .motion{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+  .motion .cell{text-align:center}
+  .motion .cap{margin-top:20px}
+  .motion .cap .k{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--peach)}
+  .motion .cap h3{font-size:22px;margin:8px 0 6px;font-weight:800}
+  .motion .cap p{color:var(--muted);font-size:15px;max-width:34ch;margin:0 auto}
+
+  /* store previews */
+  .store-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .scard{
+    border-radius:20px;overflow:hidden;border:1px solid var(--line2);
+    background:var(--card);aspect-ratio:9/16;
+  }
+  .scard img{width:100%;height:100%;object-fit:contain;display:block}
+
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .gcard{
+    position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line2);
+    background:var(--bg2);aspect-ratio:4/5;
+  }
+  .gcard img,.gcard video{width:100%;height:100%;object-fit:cover;display:block}
+  .gcard .cap{
+    position:absolute;left:0;right:0;bottom:0;padding:18px 16px 14px;
+    background:linear-gradient(to top, rgba(10,7,6,.85), transparent);
+    font-weight:800;font-size:15px;letter-spacing:-.01em;
+  }
+
+  /* footer */
+  footer{padding:80px 0 64px;text-align:center;border-top:1px solid var(--line2);margin-top:40px}
+  footer .serif{font-size:clamp(26px,4vw,40px);display:block;margin-bottom:8px}
+  footer .sub{color:var(--muted);margin-bottom:28px;font-size:17px}
+  .foot-links{margin-top:34px;color:var(--muted);font-size:14px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
+  .foot-links a:hover{color:var(--ink)}
+
+  @media(max-width:860px){
+    .hero{grid-template-columns:1fr;gap:36px;text-align:center}
+    .hero .lead{margin-left:auto;margin-right:auto}
+    .hero-cta,.badges{justify-content:center}
+    .grid4{grid-template-columns:1fr}
+    .motion{grid-template-columns:1fr;gap:44px}
+    .gallery{grid-template-columns:repeat(2,1fr)}
+    .store-grid{grid-template-columns:repeat(2,1fr)}
+    .nav-links a:not(.readme){display:none}
+    .nav-links .readme{display:inline}
+  }
+  @media(max-width:520px){
+    .gallery{grid-template-columns:1fr}
+    .phone{width:min(260px,80%)}
+  }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="content">
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><img src="C1.png" alt=""> Coffee Aeye</a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#motion">In motion</a>
+      <a href="#gallery">Gallery</a>
+      <a class="readme" href="./">Overview</a>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.jkhosting.coffeeaeye&hl=en">Get the app</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">Coffee Aeye · An AI barista in your pocket</div>
+      <h1>Scan the bag.<br>Match the recipe.<br>Brew it <span class="serif" style="font-style:italic;font-weight:600;color:var(--peach)">perfectly.</span></h1>
+      <p class="lead">Point your camera at any coffee bag. Coffee Aeye reads the label, builds a full bean dossier, matches it to the right recipes, and walks you through the pour — powered by on-device AI that feels instant.</p>
+      <div class="hero-cta">
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.jkhosting.coffeeaeye&hl=en">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 2.5v19l16-9.5-16-9.5z"/></svg>
+          Get it on Google Play
+        </a>
+        <a class="btn btn-ghost" href="#features">Explore features</a>
+      </div>
+      <div class="badges">
+        <span class="chip">100% on-device AI</span>
+        <span class="chip">AI brew expert</span>
+        <span class="chip">Smart recipe matching</span>
+        <span class="chip">Live Bluetooth scales</span>
+      </div>
+    </div>
+    <div style="position:relative">
+      <svg class="arc" style="right:-40px;top:-30px;width:300px;height:300px" viewBox="0 0 300 300" fill="none" stroke="var(--copper)" stroke-width="1.5"><circle cx="150" cy="150" r="140"/></svg>
+      <div class="phone">
+        <video src="media/anim-brew-timer-intro.mp4" autoplay muted loop playsinline poster="media/coffee-aeye-brew-timer-post.png"></video>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Everything, end to end</div>
+      <h2>The whole coffee journey, from bag label to golden cup.</h2>
+      <p>Four connected stages — scan, match, brew, and a coffee-science lab — each tuned to the beans in your hand.</p>
+    </div>
+    <div class="grid4">
+      <div class="fcard">
+        <div class="k">Scan</div>
+        <h3>One photo. A complete bean dossier.</h3>
+        <p>Snap the front and back of any bag and on-device AI reads the label for you — into a full, structured profile in seconds.</p>
+        <ul>
+          <li>Origin, region, process, elevation, varietal</li>
+          <li>Roast level &amp; classic→unique flavour scale</li>
+          <li>Roast dates, freshness rings &amp; degas status</li>
+          <li>Tap to edit any field by hand</li>
+        </ul>
+      </div>
+      <div class="fcard">
+        <div class="k">Match</div>
+        <h3>Recipes that fit <em>this</em> bag.</h3>
+        <p>A seven-signal engine scores every recipe against the scanned bean, then explains why each one fits in plain language.</p>
+        <ul>
+          <li class="dot-purple">Learns your palate from every rating</li>
+          <li class="dot-purple">“Because you liked…” beans &amp; recipes</li>
+          <li class="dot-blue">Knows your real methods, ratios &amp; origins</li>
+          <li class="dot-blue">Chat live with the built-in Brew Expert</li>
+        </ul>
+      </div>
+      <div class="fcard">
+        <div class="k">Brew</div>
+        <h3>Guided, step by step.</h3>
+        <p>A full-screen brew-along timer with a progress ring, per-step pours, and audio cues keeps your hands on the kettle.</p>
+        <ul>
+          <li class="dot-green">Live weight &amp; flow from Bluetooth scales</li>
+          <li class="dot-green">Rating advisor: concrete grind/temp/ratio moves</li>
+          <li>18 grinders — settings in your own clicks</li>
+          <li>History, weekly stats &amp; freshness reminders</li>
+        </ul>
+      </div>
+      <div class="fcard">
+        <div class="k">Lab</div>
+        <h3>A coffee-science laboratory.</h3>
+        <p>For the obsessed: a full workflow of master-tier calculators, every result charted run over run.</p>
+        <ul>
+          <li>Extraction Yield via DiFluid R2 refractometer</li>
+          <li>Darcy permeability, slurry temp, PSD, DTR</li>
+          <li>Sensory triage &amp; gradient-descent optimiser</li>
+          <li>Competition routines &amp; score sheets</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="motion">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">See it move</div>
+      <h2>Second by second, brew by brew.</h2>
+    </div>
+    <div class="motion">
+      <div class="cell">
+        <div class="phone">
+          <video src="media/anim-brew-timer-intro.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="cap">
+          <div class="k">Brew-along timer</div>
+          <h3>Step by step, second by second.</h3>
+          <p>Auto-advancing steps, a countdown for every pour, pause or skip anytime.</p>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="phone">
+          <video src="media/anim-stats-countup.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="cap">
+          <div class="k">Your week, counted</div>
+          <h3>Every brew, logged.</h3>
+          <p>Sessions roll into weekly stats and ratings on the home screen so you can watch your brewing improve.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">A closer look</div>
+      <h2>Inside the app.</h2>
+    </div>
+    <div class="gallery">
+      <div class="gcard"><img loading="lazy" src="media/03-coffee-aeye-shelf.png" alt="Your shelf"><div class="cap">Every bag, remembered</div></div>
+      <div class="gcard"><img loading="lazy" src="media/10-coffee-aeye-know-your-beans.png" alt="Bean dossier"><div class="cap">Know your beans</div></div>
+      <div class="gcard"><img loading="lazy" src="media/05-coffee-aeye-champion-recipes.png" alt="Champion recipes"><div class="cap">Champion recipes, built in</div></div>
+      <div class="gcard"><img loading="lazy" src="media/06-coffee-aeye-from-bag-to-brew.png" alt="From bag to brew"><div class="cap">From bag to brew</div></div>
+      <div class="gcard"><img loading="lazy" src="media/07-coffee-aeye-recipe-detail.png" alt="Recipe detail"><div class="cap">Recipe, in detail</div></div>
+      <div class="gcard"><img loading="lazy" src="media/coffee-aeye-brew-timer-post.png" alt="Brew timer"><div class="cap">Step by step, second by second</div></div>
+      <div class="gcard"><img loading="lazy" src="media/12-coffee-aeye-dialled-in.png" alt="Dialled in"><div class="cap">Dialled in</div></div>
+      <div class="gcard"><img loading="lazy" src="media/17-coffee-aeye-your-palate.png" alt="Your palate"><div class="cap">Your taste, mapped</div></div>
+      <div class="gcard"><img loading="lazy" src="media/19-coffee-aeye-how-you-brew.png" alt="How you brew"><div class="cap">How you actually brew</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="store">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">On Google Play</div>
+      <h2>Store previews.</h2>
+    </div>
+    <div class="store-grid">
+      <div class="scard"><img loading="lazy" src="C2.jpg" alt="Discover your next perfect brew"></div>
+      <div class="scard"><img loading="lazy" src="C3.jpg" alt="Live AI brewing advice"></div>
+      <div class="scard"><img loading="lazy" src="C4.jpg" alt="Brew-along timer"></div>
+      <div class="scard"><img loading="lazy" src="C5.jpg" alt="Scan data, brew guide, and the Lab"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="serif">Coffee Aeye</span>
+    <div class="sub">The whole coffee journey, from bag label to golden cup.</div>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.jkhosting.coffeeaeye&hl=en">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 2.5v19l16-9.5-16-9.5z"/></svg>
+      Get it on Google Play
+    </a>
+    <div class="foot-links">
+      <a href="./">Full feature overview</a>
+      <a href="https://github.com/jk-hosting/CoffeeAeye-App">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

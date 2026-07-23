@@ -24,6 +24,10 @@
   <img src="https://img.shields.io/badge/LIVE_BLUETOOTH_SCALES-0082FC?style=for-the-badge&logo=bluetooth&logoColor=white" />
 </p>
 
+<p align="center">
+  <a href="./showcase.html"><b>▸ View the interactive showcase</b></a>
+</p>
+
 ---
 
 <p align="center">
