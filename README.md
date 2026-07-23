@@ -8,7 +8,7 @@
 
 <p align="center">
   Point your camera at any coffee bag and Coffee Aeye reads the label, builds a full bean dossier,<br/>
-  matches it to brew recipes, and walks you through the pour — entirely on-device. No cloud, no account, no data leaves your phone.
+  matches it to the right recipes, and walks you through the pour — powered by on-device AI that feels instant.
 </p>
 
 <p align="center">
@@ -19,8 +19,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/100%25_ON--DEVICE_AI-FFB68C?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/WORKS_FULLY_OFFLINE-82D996?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/NO_ACCOUNT_NEEDED-A4C8FF?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/AI_BREW_EXPERT-82D996?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/SMART_RECIPE_MATCHING-A4C8FF?style=for-the-badge" />
   <img src="https://img.shields.io/badge/LIVE_BLUETOOTH_SCALES-0082FC?style=for-the-badge&logo=bluetooth&logoColor=white" />
 </p>
 
@@ -36,10 +36,10 @@
 
 ## <img src="https://img.shields.io/badge/SCAN-FFB68C?style=for-the-badge&labelColor=1A1A1A" height="26"/> One photo. A complete bean dossier.
 
-Snap the front (and back) of any coffee bag. On-device OCR plus a local Gemma vision model turn the label into structured data — tasting notes, origin, region, process, roast level, elevation, varietal, caffeine, bag weight — while the AI runs in the background so results feel instant.
+Snap the front (and back) of any coffee bag and on-device AI reads the label for you — capturing tasting notes, origin, region, process, roast level, elevation, varietal, caffeine, and bag weight into a complete bean dossier. The vision model works in the background, so a full profile is ready the moment you finish shooting.
 
 <table><tr>
-<td width="50%" valign="top"><b>100% on-device AI</b><br/>Gemma vision + ML Kit text recognition run locally. Works offline; your bags and brews never leave the phone.</td>
+<td width="50%" valign="top"><b>100% on-device AI</b><br/>A powerful vision model turns any label into a rich, structured profile — no typing, no manual entry, ready in seconds.</td>
 <td width="50%" valign="top"><b>Front + back capture</b><br/>Add the back of the bag for richer cupping notes, roast dates, and freshness tracking.</td>
 </tr><tr>
 <td width="50%" valign="top"><b>Roast &amp; flavor profiling</b><br/>Every bag gets a roast-level slider, classic→unique flavor scale, and a cupping-notes card.</td>
@@ -83,10 +83,11 @@ For the obsessed: a dedicated Lab with dial-in reports, run tracking, and a suit
   <img src="C5.jpg" width="70%" alt="Scan data, brew guide, cupping notes, and the Lab" />
 </p>
 
-## <img src="https://img.shields.io/badge/PRIVATE_BY_DESIGN-FFB68C?style=for-the-badge&labelColor=1A1A1A" height="26"/> Yours, offline
+## <img src="https://img.shields.io/badge/YOUR_LIBRARY-FFB68C?style=for-the-badge&labelColor=1A1A1A" height="26"/> Everything in one place
 
-- **No account. No cloud. No tracking.** Every model runs on your device; every record lives in a local SQLite database.
-- **Full backup &amp; restore** — export your entire shelf, recipes, and lab data as a single archive and share or re-import it anywhere.
+- **Your whole coffee world, organized** — every bag, recipe, brew, and lab run kept together in one fast, beautiful library.
+- **Full backup &amp; restore** — export your entire shelf, recipes, and lab data as a single archive and re-import it on any device.
+- **Ready the moment you open it** — no account to create, no setup, no clutter. Just scan and brew.
 
 ---
 
