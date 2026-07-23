@@ -25,7 +25,7 @@
 </p>
 
 <p align="center">
-  <a href="./showcase.html"><b>▸ View the interactive showcase</b></a>
+  <a href="https://jk-hosting.github.io/CoffeeAeye-App/"><b>▸ View the interactive showcase</b></a>
 </p>
 
 ---
