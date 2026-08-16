@@ -1,0 +1,82 @@
+/* Shared styles for Coffee Aeye subpages (index.html keeps its own inline critical CSS). */
+:root{
+  --bg:#0E0B0A; --bg2:#15100E; --card:#1A1512; --card2:#221A15;
+  --line:rgba(255,182,140,.14); --line2:rgba(255,182,140,.08);
+  --peach:#FFB68C; --peach-bright:#FF9E6B; --ink:#F5F1EC; --muted:#A89B90;
+  --blue:#8FC0FF; --purple:#C9B3FF; --green:#5FD08A; --copper:#8A5A3C;
+  --maxw:760px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:'Archivo',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  line-height:1.65; -webkit-font-smoothing:antialiased;
+}
+a{color:var(--peach);text-decoration:none}
+a:hover{color:var(--peach-bright)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.serif{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:0}
+
+nav{
+  position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);
+  background:rgba(14,11,10,.82);border-bottom:1px solid var(--line2);
+}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1120px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+.brand img{width:28px;height:28px;border-radius:8px;display:block}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+  background:var(--peach-bright);color:#241009;font-weight:800;font-size:14.5px;
+  transition:transform .18s ease, filter .18s ease;
+}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.05);color:#241009}
+.btn svg{width:15px;height:15px}
+
+main{padding:56px 0 24px}
+.eyebrow{
+  font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  font-size:12.5px;color:var(--peach);margin-bottom:14px;
+}
+h1{font-size:clamp(32px,5.4vw,46px);font-weight:900;letter-spacing:-.025em;line-height:1.06;margin-bottom:16px}
+h2{font-size:clamp(22px,3.2vw,28px);font-weight:800;letter-spacing:-.02em;line-height:1.2;margin:44px 0 14px}
+h3{font-size:19px;font-weight:800;letter-spacing:-.01em;margin:28px 0 10px}
+p{margin-bottom:16px;color:#DCD3CB}
+.lead{font-size:18.5px;color:var(--muted);margin-bottom:8px}
+ul,ol{margin:0 0 18px 22px;color:#DCD3CB}
+li{margin-bottom:8px}
+strong{color:var(--ink);font-weight:700}
+hr{border:0;border-top:1px solid var(--line2);margin:44px 0}
+.updated{color:var(--muted);font-size:14px}
+
+.callout{
+  border:1px solid var(--line);border-radius:18px;background:var(--card);
+  padding:22px 24px;margin:26px 0;
+}
+.callout p:last-child{margin-bottom:0}
+.callout .k{
+  font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--peach);margin-bottom:8px;
+}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line2)}
+th{color:var(--peach);font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+td{color:#DCD3CB}
+.crumb{font-size:14px;color:var(--muted);margin-bottom:22px}
+.crumb a{color:var(--muted)}
+.crumb a:hover{color:var(--peach)}
+
+footer{padding:64px 0 56px;text-align:center;border-top:1px solid var(--line2);margin-top:56px}
+footer .wordmark{font-family:'Fraunces',Georgia,serif;font-size:30px;font-weight:600;display:block;margin-bottom:8px}
+footer .sub{color:var(--muted);margin-bottom:24px;font-size:16px}
+.flinks{
+  margin-top:26px;display:flex;gap:8px 20px;justify-content:center;flex-wrap:wrap;
+  color:var(--muted);font-size:14.5px;
+}
+.flinks a{color:var(--muted)}
+.flinks a:hover{color:var(--peach)}
+
+@media(max-width:520px){
+  main{padding:40px 0 16px}
+  .nav-in{height:58px}
+}
