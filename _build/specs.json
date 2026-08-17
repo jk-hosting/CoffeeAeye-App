@@ -1,0 +1,200 @@
+[
+  {
+    "id": "comandante-c40",
+    "name": "Comandante C40",
+    "short": "C40",
+    "unit": "clicks",
+    "min": 0,
+    "max": 40,
+    "step": 1,
+    "espresso": 10,
+    "frenchPress": 32
+  },
+  {
+    "id": "timemore-c2-c3",
+    "name": "Timemore Chestnut C2 / C3",
+    "short": "C2",
+    "unit": "clicks",
+    "min": 0,
+    "max": 36,
+    "step": 1,
+    "espresso": 10,
+    "frenchPress": 28
+  },
+  {
+    "id": "timemore-sculptor-078",
+    "name": "Timemore Sculptor 078",
+    "short": "078",
+    "unit": "dial",
+    "min": 0,
+    "max": 10,
+    "step": 0.5,
+    "espresso": 2,
+    "frenchPress": 9.5
+  },
+  {
+    "id": "timemore-sculptor-078s",
+    "name": "Timemore Sculptor 078S",
+    "short": "078S",
+    "unit": "dial",
+    "min": 0,
+    "max": 10,
+    "step": 0.5,
+    "espresso": 1.5,
+    "frenchPress": 9
+  },
+  {
+    "id": "baratza-encore",
+    "name": "Baratza Encore",
+    "short": "Encore",
+    "unit": "setting",
+    "min": 0,
+    "max": 40,
+    "step": 1,
+    "espresso": 7,
+    "frenchPress": 32
+  },
+  {
+    "id": "baratza-virtuoso-plus",
+    "name": "Baratza Virtuoso+",
+    "short": "Virtuoso",
+    "unit": "setting",
+    "min": 0,
+    "max": 40,
+    "step": 1,
+    "espresso": 7,
+    "frenchPress": 31
+  },
+  {
+    "id": "fellow-ode-gen2",
+    "name": "Fellow Ode Gen 2",
+    "short": "Ode",
+    "unit": "dial",
+    "min": 1,
+    "max": 11,
+    "step": 0.5,
+    "espresso": 0,
+    "frenchPress": 9
+  },
+  {
+    "id": "fellow-opus",
+    "name": "Fellow Opus",
+    "short": "Opus",
+    "unit": "dial",
+    "min": 1,
+    "max": 11,
+    "step": 0.5,
+    "espresso": 2,
+    "frenchPress": 9
+  },
+  {
+    "id": "niche-zero",
+    "name": "Niche Zero",
+    "short": "Niche",
+    "unit": "setting",
+    "min": 0,
+    "max": 50,
+    "step": 1,
+    "espresso": 12,
+    "frenchPress": 40
+  },
+  {
+    "id": "df64",
+    "name": "DF64 Gen 1",
+    "short": "DF64",
+    "unit": "setting",
+    "min": 0,
+    "max": 90,
+    "step": 1,
+    "espresso": 15,
+    "frenchPress": 70
+  },
+  {
+    "id": "df64-gen2",
+    "name": "DF64 Gen 2",
+    "short": "DF64 G2",
+    "unit": "setting",
+    "min": 0,
+    "max": 90,
+    "step": 1,
+    "espresso": 15,
+    "frenchPress": 70
+  },
+  {
+    "id": "df64v",
+    "name": "DF64V",
+    "short": "DF64V",
+    "unit": "setting",
+    "min": 0,
+    "max": 90,
+    "step": 1,
+    "espresso": 15,
+    "frenchPress": 70
+  },
+  {
+    "id": "1zpresso-jx-pro",
+    "name": "1Zpresso JX-Pro",
+    "short": "JX-Pro",
+    "unit": "clicks",
+    "min": 0,
+    "max": 120,
+    "step": 1,
+    "espresso": 22,
+    "frenchPress": 85
+  },
+  {
+    "id": "1zpresso-jmax-s",
+    "name": "1Zpresso J-Max S",
+    "short": "J-Max",
+    "unit": "clicks",
+    "min": 0,
+    "max": 170,
+    "step": 1,
+    "espresso": 31,
+    "frenchPress": 120
+  },
+  {
+    "id": "kinu-m47",
+    "name": "Kinu M47 (Classic / Phoenix)",
+    "short": "M47",
+    "unit": "dial",
+    "min": 0,
+    "max": 9,
+    "step": 0.25,
+    "espresso": 2.75,
+    "frenchPress": 6.75
+  },
+  {
+    "id": "mahlkonig-x54",
+    "name": "Mahlkönig X54",
+    "short": "X54",
+    "unit": "dial",
+    "min": 1,
+    "max": 10,
+    "step": 0.5,
+    "espresso": 2,
+    "frenchPress": 8.5
+  },
+  {
+    "id": "hario-skerton-pro",
+    "name": "Hario Skerton Pro",
+    "short": "Skerton",
+    "unit": "clicks",
+    "min": 0,
+    "max": 12,
+    "step": 1,
+    "espresso": 2,
+    "frenchPress": 10
+  },
+  {
+    "id": "porlex-mini-tall-2",
+    "name": "Porlex Mini / Tall II",
+    "short": "Porlex",
+    "unit": "clicks",
+    "min": 0,
+    "max": 13,
+    "step": 1,
+    "espresso": 2.5,
+    "frenchPress": 11
+  }
+]
