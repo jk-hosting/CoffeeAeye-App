@@ -2,27 +2,177 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://coffeeaeye.com/</loc>
-    <lastmod>2026-08-16</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://coffeeaeye.com/guides/four-six-method.html</loc>
-    <lastmod>2026-08-16</lastmod>
+    <loc>https://coffeeaeye.com/grinders/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/tools/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/guides/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/tools/grinder-converter.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/tools/brew-ratio-calculator.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/tools/extraction-yield-calculator.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/tools/four-six-calculator.html</loc>
+    <lastmod>2026-08-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://coffeeaeye.com/guides/v60-dial-in.html</loc>
-    <lastmod>2026-08-16</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://coffeeaeye.com/guides/four-six-method.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/guides/reading-a-coffee-bag-label.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/guides/washed-natural-honey-process.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/guides/how-long-does-coffee-last.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/guides/roast-date-vs-best-before.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/scales.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/comandante-c40.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/timemore-c2-c3.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/timemore-sculptor-078.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/timemore-sculptor-078s.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/baratza-encore.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/baratza-virtuoso-plus.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/fellow-ode-gen2.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/fellow-opus.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/niche-zero.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/df64.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/df64-gen2.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/df64v.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/1zpresso-jx-pro.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/1zpresso-jmax-s.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/kinu-m47.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/mahlkonig-x54.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/hario-skerton-pro.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffeeaeye.com/grinders/porlex-mini-tall-2.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://coffeeaeye.com/support.html</loc>
-    <lastmod>2026-08-16</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://coffeeaeye.com/privacy.html</loc>
-    <lastmod>2026-08-16</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <priority>0.3</priority>
   </url>
 </urlset>

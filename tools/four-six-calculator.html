@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4:6 method calculator — Tetsu Kasuya pour weights and timings | Coffee Aeye</title>
+<meta name="description" content="Scale Tetsu Kasuya's 4:6 method to any dose. Set sweetness against acidity with the first 40%, strength with the last 60%, and get every pour weighed and timed.">
+<link rel="canonical" href="https://coffeeaeye.com/tools/four-six-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Coffee Aeye">
+<meta property="og:url" content="https://coffeeaeye.com/tools/four-six-calculator.html">
+<meta property="og:title" content="4:6 method calculator — pour weights and timings">
+<meta property="og:description" content="Scale Kasuya's 4:6 to any dose. Sweetness dial, strength dial, every pour weighed and timed.">
+<meta property="og:image" content="https://coffeeaeye.com/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://coffeeaeye.com/social-preview.png">
+<meta name="theme-color" content="#0E0B0A">
+<link rel="icon" type="image/png" href="../C1.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "4:6 method calculator",
+      "url": "https://coffeeaeye.com/tools/four-six-calculator.html",
+      "description": "Scales Tetsu Kasuya's 4:6 V60 method to any dose, with the sweetness split and strength pours as independent controls.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "publisher": { "@id": "https://coffeeaeye.com/#publisher" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Coffee Aeye", "item": "https://coffeeaeye.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://coffeeaeye.com/tools/" },
+        { "@type": "ListItem", "position": 3, "name": "4:6 method calculator" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="brand" href="../index.html"><img src="../C1.png" alt=""> Coffee Aeye</a>
+    <div class="nav-right">
+      <a class="nav-link" href="../grinders/">Grinders</a>
+      <a class="nav-link" href="../tools/">Tools</a>
+      <a class="nav-link" href="../guides/">Guides</a>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.jkhosting.coffeeaeye&referrer=utm_source%3Dcoffeeaeye.com%26utm_medium%3Dweb%26utm_campaign%3Dtool-four-six">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 2.5v19l16-9.5-16-9.5z"/></svg>
+        Get the app
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="crumb"><a href="../index.html">Coffee Aeye</a> → <a href="../tools/">Tools</a> → 4:6 calculator</div>
+    <div class="eyebrow">Free tool</div>
+    <h1>4:6 method calculator.</h1>
+    <p class="lead">Kasuya's method gives you two independent dials: the first 40% of the water sets sweetness against acidity, the last 60% sets strength. Set both, scale to your dose, and every pour comes out weighed and timed.</p>
+
+    <div class="calc">
+      <div class="calcgrid">
+        <div class="field">
+          <label for="dose">Coffee (g)</label>
+          <input id="dose" type="number" inputmode="decimal" step="any" min="1" value="20">
+        </div>
+        <div class="field">
+          <label for="ratio">Ratio 1 :</label>
+          <input id="ratio" type="number" inputmode="decimal" step="any" min="8" max="25" value="15">
+          <span class="hint">Kasuya uses 1:15</span>
+        </div>
+        <div class="field">
+          <label for="balance">First 40% — balance</label>
+          <select id="balance">
+            <option value="0.417">Sweeter (50 / 70)</option>
+            <option value="0.5" selected>Balanced (60 / 60)</option>
+            <option value="0.583">Brighter (70 / 50)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="strength">Last 60% — strength</label>
+          <select id="strength">
+            <option value="1">Lightest (1 pour)</option>
+            <option value="2">Medium (2 pours)</option>
+            <option value="3" selected>Strongest (3 pours)</option>
+          </select>
+        </div>
+      </div>
+      <div class="out">
+        <div class="outrow">
+          <div class="outbox">
+            <div class="ok">Total water</div>
+            <div class="ov" id="ototal">—</div>
+            <div class="os" id="osplit">—</div>
+          </div>
+          <div class="outbox">
+            <div class="ok">Pours</div>
+            <div class="ov" id="opours">—</div>
+            <div class="os">one every 45 seconds</div>
+          </div>
+          <div class="outbox">
+            <div class="ok">Finish</div>
+            <div class="ov" id="ofinish">—</div>
+            <div class="os">target drawdown</div>
+          </div>
+        </div>
+        <ul class="pourlist" id="pours"></ul>
+        <div class="verdict" id="verdict"></div>
+      </div>
+    </div>
+
+    <h2>How to use the two dials</h2>
+    <p>The whole point of the method is that these two controls do not interfere with each other. Change one, brew, taste, then change the other — never both.</p>
+    <h3>The first 40% — sweetness against acidity</h3>
+    <p>The first two pours always add up to 40% of your total water. What you change is how that total is split between them. <strong>A smaller first pour gives more sweetness. A larger first pour gives more acidity and clarity.</strong> On a washed Ethiopian that is already screaming bright, go smaller. On a flat-tasting washed Brazil, go larger.</p>
+    <h3>The last 60% — strength</h3>
+    <p>The remaining 60% is fixed in total and split into one, two or three pours. More pours means more agitation and more contact with fresh water, so more extraction and a fuller body. One single pour gives the lightest, most tea-like cup. Kasuya's own competition setting is three.</p>
+
+    <h2>Grind coarser than you think</h2>
+    <p>Five or six separate pours add up to a long total brew time, and a normal V60 grind will over-extract badly by the end. This recipe wants a noticeably coarser grind than your usual pour-over setting — that is what buys back the time. If the bed is stalling between pours or you are finishing well past 3:30, coarsen further before changing anything else.</p>
+    <p>Your grinder's specific number for this is on its <a href="../grinders/">grind chart</a> — start a step or two coarser than the V60 row.</p>
+
+    <h2>Pour technique</h2>
+    <ul>
+      <li>Each pour should take roughly ten seconds. Dumping the water in floods the bed and destroys the control the method is built on.</li>
+      <li>Let the bed draw down between pours. If it has not cleared when the next pour is due, the grind is too fine for this recipe.</li>
+      <li>Pour in circles, keep the grounds off the paper walls, and give a gentle swirl at the end of the last pour to settle the bed flat.</li>
+      <li>Water at 92–93 °C. Kasuya's original brews hot.</li>
+    </ul>
+
+    <div class="callout">
+      <div class="k">In the app</div>
+      <p>Coffee Aeye runs this as a guided brew-along: a full-screen timer with the progress ring, each pour's target weight counted down, and audio cues so your hands stay on the kettle. Connect a Bookoo Themis or Felicita Arc and it shows live weight and flow against each target as you pour. <a href="https://play.google.com/store/apps/details?id=com.jkhosting.coffeeaeye&referrer=utm_source%3Dcoffeeaeye.com%26utm_medium%3Dweb%26utm_campaign%3Dtool-46-body">Get it on Google Play</a> — €4.29, one-time.</p>
+    </div>
+
+    <p><a href="../guides/four-six-method.html">← Read the full 4:6 method guide</a></p>
+
+    <h2>More tools</h2>
+    <div class="hubgrid">
+      <a class="hubcard" href="brew-ratio-calculator.html"><span class="hk">Calculator</span><strong>Brew ratio</strong><span class="hd">Dose, water and ratio — solve for any one</span></a>
+      <a class="hubcard" href="grinder-converter.html"><span class="hk">Converter</span><strong>Grinder settings</strong><span class="hd">Move a setting between 18 grinders</span></a>
+      <a class="hubcard" href="extraction-yield-calculator.html"><span class="hk">Calculator</span><strong>Extraction yield</strong><span class="hd">TDS and beverage weight to EY%</span></a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="wordmark">Coffee Aeye</span>
+    <div class="sub">The whole coffee journey, from bag label to golden cup.</div>
+    <div class="flinks">
+      <a href="../index.html">Home</a>
+      <a href="../grinders/">Grinders</a>
+      <a href="../tools/">Tools</a>
+      <a href="../guides/">Guides</a>
+      <a href="../scales.html">Scales</a>
+      <a href="../support.html">Support</a>
+      <a href="../privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var dose = $('dose'), ratio = $('ratio'), balance = $('balance'), strength = $('strength');
+
+  function fmtTime(sec){
+    var m = Math.floor(sec / 60), s = sec % 60;
+    return m + ':' + (s < 10 ? '0' : '') + s;
+  }
+  function r1(x){ return Math.round(x * 10) / 10; }
+
+  function compute(){
+    var d = parseFloat(dose.value), r = parseFloat(ratio.value);
+    var bal = parseFloat(balance.value), n = parseInt(strength.value, 10);
+
+    if (!(d > 0) || !(r > 0)){
+      $('ototal').textContent = '—'; $('osplit').textContent = '—';
+      $('opours').textContent = '—'; $('ofinish').textContent = '—';
+      $('pours').innerHTML = '';
+      $('verdict').textContent = 'Enter a dose and ratio.';
+      return;
+    }
+
+    var total = d * r;
+    var first40 = total * 0.4;
+    var last60  = total * 0.6;
+
+    var p1 = first40 * bal;
+    var p2 = first40 - p1;
+
+    var pours = [r1(p1), r1(p2)];
+    for (var i = 0; i < n; i++) pours.push(r1(last60 / n));
+
+    var running = 0, rows = '';
+    pours.forEach(function(p, i){
+      running = r1(running + p);
+      var t = fmtTime(i * 45);
+      var tag = i === 1 ? ' <span class="edge">— end of the 40%</span>' : '';
+      rows += '<li><span class="pn">' + t + ' &nbsp;·&nbsp; pour <strong>' + p + ' g</strong>' + tag +
+              '</span><span class="pv">' + running + ' g</span></li>';
+    });
+
+    var finishSec = (pours.length - 1) * 45 + 30;
+
+    $('ototal').textContent  = r1(total) + ' g';
+    $('osplit').textContent  = r1(first40) + ' g + ' + r1(last60) + ' g · 1:' + r1(r);
+    $('opours').textContent  = pours.length;
+    $('ofinish').textContent = '~' + fmtTime(finishSec);
+    $('pours').innerHTML = rows;
+
+    var balLabel = bal < 0.5 ? 'sweeter and rounder' : bal > 0.5 ? 'brighter, more acidity' : 'balanced';
+    var strLabel = n === 1 ? 'light and tea-like' : n === 2 ? 'medium bodied' : 'strongest, fullest body';
+    var v = '<strong>' + r1(d) + ' g coffee, ' + r1(total) + ' g water at 1:' + r1(r) + '.</strong> ' +
+            'The 40% split is set ' + balLabel + '; the ' + n + '-pour finish gives you ' + strLabel + '. ' +
+            'Grind coarser than your usual V60 setting and aim to finish around ' + fmtTime(finishSec) + '.';
+    if (r < 14 || r > 17){
+      v += ' <span class="edge">Kasuya’s recipe is 1:15 — you are outside the usual band, so expect the timings to shift.</span>';
+    }
+    $('verdict').innerHTML = v;
+  }
+
+  [dose, ratio].forEach(function(el){ el.addEventListener('input', compute); });
+  [balance, strength].forEach(function(el){ el.addEventListener('change', compute); });
+  compute();
+})();
+</script>
+</body>
+</html>
