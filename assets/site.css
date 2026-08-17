@@ -122,6 +122,17 @@ th.num{text-align:right}
 .hubcard strong{font-size:16.5px;font-weight:800;letter-spacing:-.01em;line-height:1.25}
 .hubcard .hd{font-size:14px;color:var(--muted)}
 
+/* ---- mid-article CTA (lighter than .callout so it doesn't compete) ---- */
+.midcta{
+  display:flex;gap:10px 20px;align-items:baseline;flex-wrap:wrap;
+  margin:30px 0;padding:17px 20px;
+  border-left:3px solid var(--peach);border-radius:0 14px 14px 0;
+  background:linear-gradient(90deg,rgba(255,182,140,.07),rgba(255,182,140,0));
+}
+.midcta p{margin:0;flex:1 1 280px;font-size:15.5px;color:#DCD3CB}
+.midcta .go{font-weight:800;white-space:nowrap;font-size:15px}
+.midcta .go::after{content:" →"}
+
 /* ---- calculators ---- */
 .calc{
   border:1px solid var(--line);border-radius:20px;background:var(--card);
